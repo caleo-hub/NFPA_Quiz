@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #quiz-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+        .question {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .option {
+            display: block;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+        .option:hover {
+            background-color: #f0f8ff;
+            border-color: #007BFF;
+        }
+        .hidden {
+            display: none;
+        }
+        #result {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="quiz-container">
+    <div id="question-container">
+        <div class="question" id="question"></div>
+        <div class="option" data-value="1">Sim</div>
+        <div class="option" data-value="0.5">Talvez</div>
+        <div class="option" data-value="0">Não</div>
+    </div>
+    <div id="result" class="hidden"></div>
+</div>
+
+<script>
+    let quizData = {};
+    let currentQuestionIndex = 0;
+    let personalityScores = {};
+    let currentPersonality = "";
+    let questions = [];
+    let quizQuestions = [];
+
+    // Load the quiz data from the JSON file
+    fetch('quiz_personality.json')
+        .then(response => response.json())
+        .then(data => {
+            quizData = data;
+            setupQuiz();
+        });
+
+    function setupQuiz() {
+        // Prepare the quiz data
+        for (let personality in quizData) {
+            quizQuestions = quizQuestions.concat(quizData[personality].map(q => ({
+                question: q,
+                personality: personality
+            })));
+            personalityScores[personality] = 0;
+        }
+
+        // Shuffle the questions
+        quizQuestions = quizQuestions.sort(() => Math.random() - 0.5);
+
+        // Show the first question
+        showQuestion();
+    }
+
+    function showQuestion() {
+        if (currentQuestionIndex < quizQuestions.length) {
+            const currentQuestion = quizQuestions[currentQuestionIndex];
+            currentPersonality = currentQuestion.personality;
+            document.getElementById('question').innerText = currentQuestion.question;
+        } else {
+            showResult();
+        }
+    }
+
+    function handleAnswer(value) {
+        // Add score to the current personality
+        personalityScores[currentPersonality] += parseFloat(value);
+
+        // Move to the next question
+        currentQuestionIndex++;
+        showQuestion();
+    }
+
+    function showResult() {
+        const resultDiv = document.getElementById('result');
+        const questionContainer = document.getElementById('question-container');
+
+        // Hide the question container
+        questionContainer.classList.add('hidden');
+
+        // Display the result
+        let resultText = "Resultado Final:\n";
+        resultText += JSON.stringify(personalityScores, null, 2);
+        resultDiv.innerText = resultText;
+
+        // Show the result div
+        resultDiv.classList.remove('hidden');
+    }
+
+    // Add click event listeners to options
+    document.querySelectorAll('.option').forEach(option => {
+        option.addEventListener('click', function() {
+            handleAnswer(this.getAttribute('data-value'));
+        });
+    });
+</script>
+
+</body>
+</html>
