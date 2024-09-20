@@ -112,21 +112,20 @@
         showQuestion();
     }
 
-    function showResult() {
-        const resultDiv = document.getElementById('result');
-        const questionContainer = document.getElementById('question-container');
+function showResult() {
+    const resultDiv = document.getElementById('result');
+    const questionContainer = document.getElementById('question-container');
 
-        // Hide the question container
-        questionContainer.classList.add('hidden');
+    // Hide the question container
+    questionContainer.classList.add('hidden');
 
-        // Display the result
-        let resultText = "Resultado Final:\n";
-        resultText += JSON.stringify(personalityScores, null, 2);
-        resultDiv.innerText = resultText;
+    // Call the displayPersonalityResult function from quiz.js
+    displayPersonalityResult(personalityScores);
 
-        // Show the result div
-        resultDiv.classList.remove('hidden');
-    }
+    // Optionally show the result div (if you want to display anything else in the result div)
+    resultDiv.classList.remove('hidden');
+}
+
 
     // Add click event listeners to options
     document.querySelectorAll('.option').forEach(option => {
