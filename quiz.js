@@ -1,16 +1,16 @@
 function displayPersonalityResult(scores) {
     const explanations = {
-        "Inflamável": "Você tem uma personalidade altamente reativa, 'inflamando' em situações de estresse. Prepare-se para perder a paciência com facilidade.",
-        "Explosivo": "Você tem uma personalidade imprevisível e intensa, explodindo em reações desproporcionais quando menos se espera.",
-        "Tóxico": "Você tem comportamentos prejudiciais, drenando a energia emocional dos outros e deixando um rastro de negatividade.",
-        "Irritante": "Você é aquele tipo de pessoa que sempre consegue irritar os outros, mesmo sem ser intencional. Constantemente provoca desconforto.",
-        "Perigoso quando molhado": "Você é tranquilo, até que certas situações emocionais o transformam em alguém destrutivo. Tenha cuidado com seu humor variável.",
-        "Corrosivo": "Sua personalidade crítica corrói relacionamentos lentamente, minando as pessoas ao seu redor com seu negativismo constante.",
-        "Mutagênico": "Você influencia negativamente os outros, alterando suas essências para pior após longos períodos de interação.",
-        "Infeccioso": "Seu carisma é contagioso, mas não sabemos se isso é uma boa coisa. As pessoas se tornam mais parecidas com você com o tempo.",
-        "Orgânico Peróxido": "Você é impulsivo e volátil, provocando reações perigosas quando está com as influências erradas.",
-        "Gás Tóxico": "Você intoxica rapidamente o ambiente ao seu redor com comportamentos nocivos e palavras prejudiciais.",
-        "Agente Oxidante": "Você intensifica o drama e provoca reações fortes, exacerbando conflitos e emoções nas pessoas ao seu redor."
+        "Inflamável": "🔥Você tem uma personalidade altamente reativa, 'inflamando' em situações de estresse. Prepare-se para perder a paciência com facilidade.",
+        "Explosivo": "💥Você tem uma personalidade imprevisível e intensa, explodindo em reações desproporcionais quando menos se espera.",
+        "Tóxico": "☠️Você tem comportamentos prejudiciais, drenando a energia emocional dos outros e deixando um rastro de negatividade.",
+        "Irritante": "😡Você é aquele tipo de pessoa que sempre consegue irritar os outros, mesmo sem ser intencional. Constantemente provoca desconforto.",
+        "Perigoso quando molhado": "💧Você é tranquilo, até que certas situações emocionais o transformam em alguém destrutivo. Tenha cuidado com seu humor variável.",
+        "Corrosivo": "🧪Sua personalidade crítica corrói relacionamentos lentamente, minando as pessoas ao seu redor com seu negativismo constante.",
+        "Mutagênico": "🧬Você influencia negativamente os outros, alterando suas essências para pior após longos períodos de interação.",
+        "Infeccioso": "🦠Seu carisma é contagioso, mas não sabemos se isso é uma boa coisa. As pessoas se tornam mais parecidas com você com o tempo.",
+        "Orgânico Peróxido": "⚠️Você é impulsivo e volátil, provocando reações perigosas quando está com as influências erradas.",
+        "Gás Tóxico": "🚫Você intoxica rapidamente o ambiente ao seu redor com comportamentos nocivos e palavras prejudiciais.",
+        "Agente Oxidante": "🌬️Você intensifica o drama e provoca reações fortes, exacerbando conflitos e emoções nas pessoas ao seu redor."
     };
 
     const sarcasticComments = {
