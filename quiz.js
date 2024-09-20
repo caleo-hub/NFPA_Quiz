@@ -33,19 +33,17 @@ function displayPersonalityResult(scores) {
     
     if (topScores.length === 0) {
         // Se nenhuma pontuação for maior que 0
-        alert("Você é uma verdadeira joia... ou está só escondendo suas toxicidades?");
-        return;
+        return "Você é uma verdadeira joia... ou está só escondendo suas toxicidades?";
     }
 
     const topPersonalities = topScores.filter(score => score[1] === topScores[0][1]);
 
     // Se houver mais de duas personalidades empatadas no pódio com pontuação > 2
     if (topPersonalities.length > 2 && topPersonalities[0][1] > 2) {
-        alert("Parabéns! Você alcançou o status de Super Tóxico. Bem, pelo menos você é consistente.");
-        return;
+        return "Parabéns! Você alcançou o status de Super Tóxico. Bem, pelo menos você é consistente.";
     }
 
-    // Exibir as duas personalidades mais presentes
+    // Montar o texto de resultado
     let resultText = "As suas personalidades mais presentes são:\n";
     
     topPersonalities.slice(0, 2).forEach(([personality]) => {
@@ -53,5 +51,5 @@ function displayPersonalityResult(scores) {
         resultText += `Comentário sarcástico: ${sarcasticComments[personality]}\n\n`;
     });
 
-    alert(resultText);
+    return resultText;
 }
