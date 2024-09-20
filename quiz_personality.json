@@ -1,0 +1,57 @@
+{
+    "Inflamável": [
+        "Você tende a reagir rapidamente a situações estressantes?",
+        "Você costuma perder a paciência com facilidade?",
+        "É comum você ficar irritado(a) com pequenos contratempos?"
+    ],
+    "Explosivo": [
+        "Você costuma ter reações intensas em situações inesperadas?",
+        "As pessoas ao seu redor te consideram imprevisível?",
+        "Você já teve uma reação exagerada que surpreendeu os outros?"
+    ],
+    "Tóxico": [
+        "Você já foi acusado(a) de ser uma influência negativa?",
+        "As pessoas ao seu redor se afastam após passarem muito tempo com você?",
+        "Você já foi descrito(a) como alguém que 'drena' os outros emocionalmente?"
+    ],
+    "Irritante": [
+        "Você já foi acusado(a) de incomodar constantemente os outros?",
+        "As pessoas ao seu redor te acham provocador(a), mesmo em situações simples?",
+        "Você já percebeu que seus comentários ou ações irritam frequentemente as pessoas?"
+    ],
+    "Perigoso quando molhado": [
+        "Você já foi descrito(a) como calmo(a), mas que muda sob pressão?",
+        "Sua personalidade muda drasticamente quando você está estressado(a) ou triste?",
+        "Você tende a agir de maneira destrutiva em certas condições emocionais?"
+    ],
+    "Corrosivo": [
+        "Você já foi acusado(a) de minar lentamente os relacionamentos com críticas constantes?",
+        "As pessoas ao seu redor já mencionaram que seus comentários 'corroem' a convivência?",
+        "Você se considera alguém que afeta a confiança dos outros com o tempo?"
+    ],
+    "Mutagênico": [
+        "Você já sentiu que tem uma influência negativa sobre o comportamento dos outros?",
+        "As pessoas ao seu redor mudam após passarem muito tempo com você?",
+        "Você já foi acusado(a) de alterar o comportamento dos outros para pior?"
+    ],
+    "Infeccioso": [
+        "Você se considera uma pessoa carismática que influencia os outros facilmente?",
+        "As pessoas costumam 'adotar' suas atitudes ou comportamento?",
+        "Você já percebeu que seu humor ou comportamento afeta diretamente quem está por perto?"
+    ],
+    "Orgânico Peróxido": [
+        "Você costuma reagir impulsivamente quando combinado(a) com outras pessoas?",
+        "Suas reações já causaram consequências desastrosas em grupo?",
+        "Você tem tendência a ser volátil, especialmente quando em combinação com certas influências?"
+    ],
+    "Gás Tóxico": [
+        "Você já foi descrito(a) como alguém que rapidamente intoxica o ambiente ao seu redor?",
+        "As pessoas costumam se sentir prejudicadas emocionalmente após interagir com você?",
+        "Você já percebeu que suas palavras ou comportamentos afetam negativamente o ambiente?"
+    ],
+    "Agente Oxidante": [
+        "Você costuma intensificar conflitos ou drama ao seu redor?",
+        "As pessoas ao seu redor costumam reagir fortemente às suas atitudes?",
+        "Você já foi descrito(a) como alguém que 'exacerba' situações?"
+    ]
+}
