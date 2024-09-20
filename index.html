@@ -60,7 +60,7 @@
     <div id="result" class="hidden"></div>
 </div>
 
-<script>
+<script src="quiz.js">
     let quizData = {};
     let currentQuestionIndex = 0;
     let personalityScores = {};
@@ -119,13 +119,15 @@ function showResult() {
     // Hide the question container
     questionContainer.classList.add('hidden');
 
-    // Call the displayPersonalityResult function from quiz.js
-    displayPersonalityResult(personalityScores);
+    // Call the displayPersonalityResult function and get the result text
+    const resultText = displayPersonalityResult(personalityScores);
 
-    // Optionally show the result div (if you want to display anything else in the result div)
+    // Display the result text in the resultDiv
+    resultDiv.innerText = resultText;
+
+    // Show the result div
     resultDiv.classList.remove('hidden');
 }
-
 
     // Add click event listeners to options
     document.querySelectorAll('.option').forEach(option => {
